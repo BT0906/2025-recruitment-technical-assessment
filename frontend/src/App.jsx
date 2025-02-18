@@ -6,7 +6,7 @@ import roomData from '../data.json'
 
 function App() {
   const [doorClosed, setDoorClosed] = useState(false);
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState("Grid View");
 
   const menuButtons = [
     {
