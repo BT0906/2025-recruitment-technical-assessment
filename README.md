@@ -1,9 +1,9 @@
 ## My Comments
-> ✅ responsive
-> ✅ door opens and closes
-> improved clarity of buttons within the cards (i.e. rooms available and rating button)
-> added dark mode
-> added dropdowns for filter/sort
+> - ✅ responsive
+> - ✅ door opens and closes
+> - improved clarity of buttons within the cards (i.e. rooms available and rating button)
+> - added dark mode
+> - added dropdowns for filter/sort
 
 # DevSoc 2025 Subcommittee Recruitment Technical Assessment
 
