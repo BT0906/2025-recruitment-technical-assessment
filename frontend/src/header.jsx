@@ -29,7 +29,6 @@ export function Header({ className, ...props }) {
       {...props}
     >
       <FreeroomsLogo/>
-
       <div className="flex space-x-2">
         {menuButtons.map(obj => (
           <Button
