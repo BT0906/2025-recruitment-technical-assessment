@@ -6,7 +6,7 @@ export function RoomButton({ roomsAvailable = 0, className, ...props }) {
     <>
       {/* SM BUTTON */}
       <Button
-        className={`p-2 flex sm:hidden bg-background text-black text-xs hover:bg-accent hover:ring hover:ring-2 hover:ring-primary transition-all rounded-2xl ${className}}`}
+        className={`p-2 flex sm:hidden bg-background text-foreground text-xs hover:bg-accent hover:ring hover:ring-2 hover:ring-primary transition-all rounded-2xl ${className}}`}
         {...props}
       >
         <div className={`w-3 h-3 rounded-full ${roomsAvailable <= 0 ? 'bg-red-500' : roomsAvailable <= 5 ? 'bg-orange-400' : 'bg-green-600'}`}/>
@@ -15,7 +15,7 @@ export function RoomButton({ roomsAvailable = 0, className, ...props }) {
 
       {/* MD+ BUTTON */}
       <Button
-        className={`hidden sm:flex bg-background text-black text-xs hover:bg-accent hover:ring hover:ring-2 hover:ring-primary transition-all ${className}}`}
+        className={`hidden sm:flex bg-background text-foreground text-xs hover:bg-accent hover:ring hover:ring-2 hover:ring-primary transition-all ${className}}`}
         {...props}
       >
         <div className={`w-3 h-3 rounded-full ${roomsAvailable <= 0 ? 'bg-red-500' : roomsAvailable <= 5 ? 'bg-orange-400' : 'bg-green-600'}`}/>

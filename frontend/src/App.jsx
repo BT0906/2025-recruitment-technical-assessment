@@ -1,16 +1,17 @@
 import { Button } from '@/components/ui/button'
 import { SearchBar } from '@/components/ui/searchBar'
-import { RoomCard } from './components/ui/roomCard'
+import { RoomCard } from '@/components/ui/roomCard'
 import roomData from '../data.json'
 
 import { Filter, ListFilter } from 'lucide-react'
 import { Header } from './header'
+import { ThemeProvider } from '@/components/themeProvider'
 
 function App() {
-  const ASSET_PATH = '/assets/'
+  const ASSET_PATH = '/assets/';
 
   return (
-    <>
+    <ThemeProvider defaultTheme="light">
       <Header/>
       <section className="mx-auto container">
         <section className="p-3 flex justify-between items-center space-x-2">
@@ -39,7 +40,7 @@ function App() {
           ))}
         </div>
       </section>
-    </>
+    </ThemeProvider>
   )
 }
 

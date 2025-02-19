@@ -2,9 +2,11 @@ import { cloneElement, useState } from 'react'
 import { FreeroomsLogo } from './components/ui/freeroomsLogo';
 import { Button } from '@/components/ui/button'
 import { Search, LayoutGrid, Map, Moon } from 'lucide-react'
+import { useTheme } from './components/themeProvider';
 
 export function Header({ className, ...props }) {
   const [activeButton, setActiveButton] = useState("Grid View");
+  const { theme, setTheme } = useTheme();
 
   const menuButtons = [
     {
@@ -18,11 +20,7 @@ export function Header({ className, ...props }) {
     {
       name: "Map",
       icon: <Map/>,
-    },
-    {
-      name: "Dark Mode",
-      icon: <Moon/>,
-    },
+    }
   ]
 
   return (
@@ -45,6 +43,15 @@ export function Header({ className, ...props }) {
             {cloneElement(obj.icon, { className: "stroke-[1.5px]" })}
           </Button>
         ))}
+          <Button
+            variant={theme === "dark" ? "default" : "outline"}
+            size="icon"
+            className="p-2 cursor-pointer"
+            asChild
+            onClick={() => theme === "dark" ? setTheme("light") : setTheme("dark")}
+          >
+            <Moon className="stroke-[1.5px]"/>
+          </Button>
       </div>
     </header>
   )

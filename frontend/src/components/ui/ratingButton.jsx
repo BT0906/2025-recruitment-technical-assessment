@@ -5,7 +5,7 @@ export function RatingButton({ buildingName, rating = 0, className, ...props }) 
     <>
       {/* SM BUTTON */}
       <Button
-        className={`p-2 flex sm:hidden bg-background text-black text-xs hover:bg-accent hover:ring hover:ring-2 hover:ring-primary transition-all rounded-2xl ${className}}`}
+        className={`p-2 flex sm:hidden bg-background text-foreground text-xs hover:bg-accent hover:ring hover:ring-2 hover:ring-primary transition-all rounded-2xl ${className}}`}
         {...props}
       >
         <svg className="ml-1 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -15,7 +15,7 @@ export function RatingButton({ buildingName, rating = 0, className, ...props }) 
       </Button>
 
       {/* MD+ BUTTON */}
-      <Button className={`hidden sm:flex justify-between min-h-12 text-wrap text-start hover:bg-primary hover:ring hover:ring-2 hover:ring-background transition-all ${className}`} {...props}>
+      <Button className={`hidden sm:flex justify-between min-h-12 text-wrap text-start text-white hover:bg-primary hover:ring hover:ring-2 hover:ring-white transition-all ${className}`} {...props}>
         <div>{buildingName}</div>
         <div className="flex items-center">
           <span>{rating}</span>

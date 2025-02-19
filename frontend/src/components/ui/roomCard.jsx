@@ -1,12 +1,8 @@
-import {
-  Card,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import { RoomButton } from "./roomButton"
 import { RatingButton } from "./ratingButton"
 
-export function RoomCard({ name, picture, rating = 0.0, roomsAvailable = 0.0, className, ...props }) {
+export function RoomCard({ name, picture, rating = 0.0, roomsAvailable = 0, className, ...props }) {
   return (
     <Card
       className={`border-none sm:h-48 lg:h-64 xl:h-80 bg-cover bg-center relative overflow-hidden group cursor-pointer ${className}`}
@@ -21,7 +17,7 @@ export function RoomCard({ name, picture, rating = 0.0, roomsAvailable = 0.0, cl
 
       {/* sm layout */}
       <section className="sm:hidden flex justify-between items-center p-4 relative z-10">
-        <div className="text-background font-bold">{name}</div>
+        <div className="text-white font-bold">{name}</div>
         <div className="flex flex-col space-y-1 w-20">
           <RoomButton roomsAvailable={roomsAvailable}/>
           <RatingButton className="sm:w-full" buildingName={name} rating={rating}/>
