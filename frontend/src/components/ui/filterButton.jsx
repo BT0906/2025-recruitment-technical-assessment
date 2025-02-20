@@ -20,6 +20,8 @@ export function FilterButton({ className, ...props }) {
   const [capacity, setCapacity] = useState();
   const [location, setLocation] = useState();
 
+  const numFilters = [roomType, capacity, location].filter(Boolean).length;
+
   const handleClear = () => {
     setRoomType(null);
     setCapacity(null);
@@ -31,7 +33,8 @@ export function FilterButton({ className, ...props }) {
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className="px-5">
           <Filter className="fill-primary"/>
-          <span className="select-none">Filters</span>
+          Filters
+          {numFilters > 0 && ` (${numFilters})`}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">

@@ -23,7 +23,7 @@ export function SortButton({ className, ...props }) {
       <DropdownMenuContent className="w-56">
         <DropdownMenuRadioGroup value={sort} onValueChange={setSort}>
           <DropdownMenuRadioItem value="alphabetical">Alphabetical</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="nearest">Nearest</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="nearest"> Nearest</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="mostAvailable">Most available rooms</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>

@@ -14,7 +14,7 @@ export function FreeroomsLogo({ className, ...props }) {
     >
       <img className={`${doorClosed ? "hidden" : ""}`} src="./assets/freeRoomsLogo.png" width={50} />
       <img className={`${!doorClosed ? "hidden" : ""}`} src="./assets/freeroomsDoorClosed.png" width={50} />
-      <span className="text-primary font-bold text-2xl">Freerooms</span>
+      <span className="hidden sm:block text-primary font-bold text-2xl">Freerooms</span>
     </div>
   )
 }
