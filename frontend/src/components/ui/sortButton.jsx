@@ -13,7 +13,7 @@ export function SortButton({ className, ...props }) {
   const [sort, setSort] = useState("alphabetical");
 
   return (
-    <DropdownMenu>
+    <DropdownMenu className={`${className}`} {...props}>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className="px-5">
           <ListFilter/>
